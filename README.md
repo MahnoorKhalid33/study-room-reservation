@@ -41,8 +41,8 @@ Prompts were iteratively improved to better align with system requirements.
 ---
 
 ## Team Members
-- Your Name
-- Partner Name
+- Mahnoor Khalid
+- Ansh Dubey
 
 ---
 
