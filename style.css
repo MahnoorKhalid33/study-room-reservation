@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #eef4ff;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(90deg, #003b5c, #0077b6);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+}
+
+.filters {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.filters h2 {
+    color: #005f8f;
+}
+
+.filters label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.filters input,
+.filters select {
+    width: 100%;
+    padding: 9px;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #f26b21;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #c94f10;
+}
+
+.content {
+    flex: 1;
+}
+
+.card {
+    background: white;
+    display: flex;
+    gap: 18px;
+    padding: 16px;
+    margin-bottom: 18px;
+    border-left: 6px solid #0077b6;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+.card h3 {
+    color: #005f8f;
+    margin-top: 0;
+}
+
+.tags span {
+    display: inline-block;
+    background: #d9f0ff;
+    color: #005f8f;
+    padding: 5px 8px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.book-btn {
+    margin-left: auto;
+    align-self: center;
+    min-width: 110px;
+}
+
+.notice {
+    background: #fff3cd;
+    border-left: 6px solid #ffb703;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.confirmation {
+    background: #d8f3dc;
+    border-left: 6px solid #2d6a4f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Assistive features */
+.large-text {
+    font-size: 1.25em;
+}
+
+.high-contrast {
+    background: #000;
+    color: #fff;
+}
+
+.high-contrast .filters,
+.high-contrast .card,
+.high-contrast .confirmation,
+.high-contrast .notice {
+    background: #111;
+    color: #fff;
+    border-color: yellow;
+}
+
+.high-contrast header {
+    background: #000;
+    border-bottom: 4px solid yellow;
+}
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.login-card {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#loginError {
+    color: red;
+    font-weight: bold;
+}
