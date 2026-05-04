@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page title shown in browser tab -->
+    <title>UTSA Study Room Reservation</title>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<!-- Displays system title and description -->
+<header>
+    <h1>UTSA Study Room Reservation</h1>
+    <p>Search, reserve, and manage study rooms</p>
+</header>
+
+
+<!-- ================= LOGIN PAGE ================= -->
+<!-- This section is shown first before accessing the system -->
+<section id="loginPage" class="login-page">
+
+    <div class="login-card">
+
+        <!-- Login heading -->
+        <h2>Student Login</h2>
+
+        <!-- Input field for student name -->
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <!-- Input field for student email -->
+        <input type="email" id="studentEmail" placeholder="Enter your UTSA email">
+
+        <!-- Login button triggers login() function in JS -->
+        <button onclick="login()">Login</button>
+
+        <!-- Error message display (if login fails) -->
+        <p id="loginError"></p>
+
+    </div>
+</section>
+
+
+<!-- ================= MAIN APPLICATION ================= -->
+<!-- Hidden by default, shown after successful login -->
+<div id="mainApp" class="main" style="display:none;">
+
+
+    <!-- ================= LEFT FILTER PANEL ================= -->
+    <!-- Allows user to input search criteria -->
+    <aside class="filters">
+
+        <h2>Search by Space</h2>
+
+        <!-- Input for minimum room capacity -->
+        <label>Room Capacity</label>
+        <input type="number" id="capacity" placeholder="Example: 4">
+
+        <!-- Date selection -->
+        <label>Date</label>
+        <input type="date" id="date">
+
+        <!-- Start time selection -->
+        <label>From</label>
+        <input type="time" id="fromTime">
+
+        <!-- End time selection -->
+        <label>Until</label>
+        <input type="time" id="untilTime">
+
+        <!-- Feature filters -->
+        <label><input type="checkbox" id="board"> Whiteboard</label>
+        <label><input type="checkbox" id="plugs"> Power Available</label>
+        <label><input type="checkbox" id="accessible"> Accessible Space</label>
+
+        <!-- Button to trigger room search -->
+        <button onclick="searchRooms()">Search Rooms</button>
+
+        <hr>
+
+        <!-- ================= ASSISTIVE FEATURES ================= -->
+        <!-- Accessibility and usability enhancements -->
+        <h2>Assistive Features</h2>
+
+        <!-- Toggle larger text for better readability -->
+        <button onclick="toggleLargeText()">Large Text</button>
+
+        <!-- Toggle high contrast mode -->
+        <button onclick="toggleHighContrast()">High Contrast</button>
+
+        <!-- Language selection dropdown -->
+        <label>Language</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="ur">Urdu</option>
+        </select>
+
+    </aside>
+
+
+    <!-- ================= RIGHT CONTENT AREA ================= -->
+    <!-- Displays results and reservation messages -->
+    <section class="content">
+
+        <!-- Reservation confirmation appears here (TOP of page) -->
+        <div id="reservationBox"></div>
+
+        <!-- Section title for search results -->
+        <h2 id="resultsTitle">Available Study Rooms</h2>
+
+        <!-- Dynamic room results inserted here via JavaScript -->
+        <div id="results"></div>
+
+    </section>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<!-- External JS file that controls logic and interactivity -->
+<script src="script.js"></script>
+
+</body>
+</html>
